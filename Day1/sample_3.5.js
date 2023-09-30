@@ -3,9 +3,9 @@
 * syntax: Array.length
 ***************************/
 var myArr = ["a", "b", "c", "d"]
-console.log( myArr.length ) // will print: 4
+// console.log( myArr.length ) // will print: 4
 myArr.length = 2 // original array gets modified
-console.log( myArr ) // will print: [ 'a', 'b' ]
+// console.log( myArr ) // will print: [ 'a', 'b' ]
 
 /******************************
 * concat
@@ -13,14 +13,15 @@ console.log( myArr ) // will print: [ 'a', 'b' ]
 **********************/
 const course = [ 'C', 'S', 'E' ]
 const code = [ '4', '4', '6' ]
-const final = course.concat( code ) // will be: [ 'C', 'S', 'E', '4', '4', '6' ]
-console.log( final )
+const final = course.concat( code ) // will be: [ 'C',* 'S',* 'E',* '4', *'4', *'6' ]
+// console.log( final )
 
 /*********************************************************************************************************************
 * join: bind the elements of array by adding the parameter value in between the elements and convert it into a string. 
 * syntax: Array.join( string ) 
 **********************************************************************************************************************/
-const finalStr = final.join('') // will be CSE446
+const finalStr = final.join('-') // will be CSE446
+// console.log( finalStr )
 
 /*********************************************************************************************************************
 * includes: iterate and check the target string exist or not. Return result as Boolean 
@@ -28,3 +29,8 @@ const finalStr = final.join('') // will be CSE446
 **********************************************************************************************************************/
 const checkLowerCase = finalStr.includes( 'cse' ) // will return false 
 const checkUpperCase = finalStr.includes( 'CSE' ) // will return true 
+
+const test = [ 'CSE', '446' ]
+
+const incResult = test.includes( 'CSE' )
+console.log( incResult )
